@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "PC_CapsulePlayerController.generated.h"
 
+struct FInputActionValue;
 class UInputMappingContext;
 /**
  * 

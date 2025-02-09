@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "C_Player.generated.h"
 
+struct FInputActionValue;
 class UAC_GrappleComponent;
 class USpringArmComponent;
 class UCameraComponent;
@@ -35,7 +36,7 @@ public:
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	virtual void Jump() override;
-	void Crouch();
+	virtual void Crouch(bool bClientSimulation = false) override;
 
 	void UseGrapple();
 	void PullGrapple();

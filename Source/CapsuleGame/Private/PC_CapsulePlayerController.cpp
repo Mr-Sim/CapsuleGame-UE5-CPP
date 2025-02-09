@@ -58,57 +58,64 @@ void APC_CapsulePlayerController::DeactivateGrappleContext()
 
 void APC_CapsulePlayerController::Move(const FInputActionValue& Value)
 {
-	if (auto* Player = Cast<AC_Player>(GetPawn()))
+	CapsulePlayer = Cast<AC_Player>(GetPawn());
+	if (CapsulePlayer)
 	{
-		Player->Move(Value);
+		CapsulePlayer->Move(Value);
 	}
 }
 
 void APC_CapsulePlayerController::Look(const FInputActionValue& Value)
 {
-	if (auto* Player = Cast<AC_Player>(GetPawn()))
+	CapsulePlayer = Cast<AC_Player>(GetPawn());
+	if (CapsulePlayer)
 	{
-		Player->Look(Value);
+		CapsulePlayer->Look(Value);
 	}
 }
 
 void APC_CapsulePlayerController::Jump()
 {
-	if (auto* Player = Cast<AC_Player>(GetPawn()))
+	CapsulePlayer = Cast<AC_Player>(GetPawn());
+	if (CapsulePlayer)
 	{
-		Player->Jump();
+		CapsulePlayer->Jump();
 	}
 }
 
 void APC_CapsulePlayerController::Crouch()
 {
-	if (auto* Player = Cast<AC_Player>(GetPawn()))
+	CapsulePlayer = Cast<AC_Player>(GetPawn());
+	if (CapsulePlayer)
 	{
-		Player->Crouch();
+		CapsulePlayer->Crouch();
 	}
 }
 
 void APC_CapsulePlayerController::UseGrapple()
 {
-	if (auto* Player = Cast<AC_Player>(GetPawn()); Player)
+	CapsulePlayer = Cast<AC_Player>(GetPawn());
+	if (CapsulePlayer)
 	{
-		Player->UseGrapple();
+		CapsulePlayer->UseGrapple();
 	}
 }
 
 void APC_CapsulePlayerController::PullGrapple()
 {
-	if (auto* Player = Cast<AC_Player>(GetPawn()); Player)
+	CapsulePlayer = Cast<AC_Player>(GetPawn());
+	if (CapsulePlayer)
 	{
-		Player->PullGrapple();
+		CapsulePlayer->PullGrapple();
 	}
 }
 
 void APC_CapsulePlayerController::ReleaseGrapple()
 {
-	if (auto* Player = Cast<AC_Player>(GetPawn()); Player)
+	CapsulePlayer = Cast<AC_Player>(GetPawn());
+	if (CapsulePlayer)
 	{
-		Player->ReleaseGrapple();
+		CapsulePlayer->ReleaseGrapple();
 	}
 }
 

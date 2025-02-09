@@ -60,8 +60,9 @@ void AC_Player::Jump()
 	Super::Jump();
 }
 
-void AC_Player::Crouch()
+void AC_Player::Crouch(bool bClientSimulation)
 {
+	Super::Crouch(bClientSimulation);
 }
 
 void AC_Player::UseGrapple()
